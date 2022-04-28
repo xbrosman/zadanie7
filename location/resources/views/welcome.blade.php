@@ -11,7 +11,14 @@
 <body class="antialiased">
 
     <div class="container mx-auto px-4">
-        <h1>Hlavná stránka</h1>
+        
+        <header>
+            <h1>Hlavná stránka</h1>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/stats">Štatistika</a></li>
+            </ul>
+        </header>
 
         <form action="/" method="post">
             @csrf
@@ -53,4 +60,5 @@
     </div>
 
 </body>
+
 </html>
