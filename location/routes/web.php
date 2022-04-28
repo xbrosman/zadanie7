@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LocationController;
+use App\Http\Controllers\StatsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +21,8 @@ Route::get('/', function () {
 
 Route::post('/', [LocationController::class, 'search']);
 
-Route::get('/{name}', function ($name) {
+Route::get('/hello/{name}', function ($name) {
     return "Hello $name";
 });
+
+Route::get('/stats', [StatsController::class, 'show']);
