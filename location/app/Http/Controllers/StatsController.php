@@ -17,8 +17,8 @@ class StatsController extends Controller
     }
 
     public function showCountry (Request $request, $country){
-        $queryRes = Location::all()->where('coutry', $country);
-        return view('stats')->with(['queryRes' => $queryRes ]);    
+        $countryStats =Location::select('query', DB::raw('COUNT(*) as count'))->where('country',  $country)->groupBy('query')->get();
+        return view('stats')->with(['countryStats' => $countryStats ]);    
     }
 }
  

@@ -14,6 +14,25 @@
         <h1>Štatistika</h1>
     </div>
 
+    @if (isset($countryStats))
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Mesto</th>
+                <th>Počet</th>
+            </tr>
+
+        </thead>
+        @foreach ($countryStats as $item)
+        <tr>
+            <td>{{ $item->query }}</td>
+            <td>{{ $item->count }}</td>
+        </tr>
+        @endforeach
+    </table>
+    @endif
+
+    @if (isset($queryRes))
     <table>
         <thead>
             <tr>
@@ -31,12 +50,10 @@
             <td>{{ $item->alphacode }}</td>
             <td>{{ $item->count }}</td>
             
-        </tr>
-            
+        </tr>            
         @endforeach
-
     </table>
-   
+    @endif   
 
 </body>
 </html>
