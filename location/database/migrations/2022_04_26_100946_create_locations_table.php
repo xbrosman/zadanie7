@@ -17,7 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('query');
             $table->string('country');
-            $table->string('capital')->nullable();
+            $table->string('alphacode');
+            $table->string('capital')->nullable();            
             $table->float('latitude',9,6);
             $table->float('longitude',9,6);
             $table->timestamps();

@@ -25,7 +25,7 @@
         @if (isset($location))
             <p>GPS: {{ $location->latitude }}, {{ $location->longitude }}</p>
             <p>Štát: {{ $location->country }}</p>
-            <p>Hlavné mesto: </p>
+            <p>Hlavné mesto: {{ $location->capital }}</p>
         @endif
 
         @if (isset($weather))

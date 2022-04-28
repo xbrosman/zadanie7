@@ -14,7 +14,29 @@
         <h1>Štatistika</h1>
     </div>
 
-    {{ $data }}
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Štát</th>
+                <th>Kód</th>
+                <th>Počet</th>
+            </tr>
+
+        </thead>
+        @foreach ($queryRes as $item)
+        <tr>
+            
+            <td><a href="stats/{{ $item->country }}">{{ $item->country }}</a></td>
+            <td><img src="http://www.geonames.org/flags/x/{{ $item->alphacode }}.gif" alt="http://www.geonames.org/flags/x/{{ $item->alphacode }}.gif" width="30"></td>
+            <td>{{ $item->alphacode }}</td>
+            <td>{{ $item->count }}</td>
+            
+        </tr>
+            
+        @endforeach
+
+    </table>
+   
 
 </body>
 </html>

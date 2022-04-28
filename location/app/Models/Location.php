@@ -13,6 +13,7 @@ class Location extends Model
         'country',
         'capital',
         'latitude',
-        'logitude'
+        'logitude',
+        'alphacode'
     ];
 }

@@ -26,3 +26,5 @@ Route::get('/hello/{name}', function ($name) {
 });
 
 Route::get('/stats', [StatsController::class, 'show']);
+
+Route::get('/stats/{country}', [StatsController::class, 'showCountry']);
